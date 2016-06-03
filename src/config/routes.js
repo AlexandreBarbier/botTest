@@ -9,7 +9,7 @@ var mount = require('koa-mount');
 module.exports = function(app) {
 
 	// YEOMAN INJECT ROUTES BELOW
+	app.use(mount('/webhook', require('../resources/webhook')));
   app.use(mount('/', require('../resources/root')));
-
 
 };
